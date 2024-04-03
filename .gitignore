@@ -1,7 +1,9 @@
 # Logs
 .dist/*
-.vs/*
+.vs/
 
+.vs
+.vs/*
 
 logs
 *.log
