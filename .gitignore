@@ -1,5 +1,7 @@
 # Logs
 .dist/*
+.vs/*
+
 
 logs
 *.log
