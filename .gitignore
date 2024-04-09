@@ -1,7 +1,10 @@
 # Logs
 .dist/*
 .vs/
+<<<<<<< HEAD
 
+=======
+>>>>>>> 247d72b (init)
 .vs
 .vs/*
 
@@ -28,3 +31,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+<<<<<<< HEAD
+=======
+
+bun.lockb
+>>>>>>> 247d72b (init)
