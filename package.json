@@ -17,12 +17,9 @@
     "vite": "^5.1.6"
   },
   "dependencies": {
-<<<<<<< HEAD
-=======
     "@types/aos": "^3.0.7",
     "@types/gsap": "^3.0.0",
     "@types/swiper": "^6.0.0",
->>>>>>> 247d72b (init)
     "aos": "^2.3.4",
     "atropos": "^2.0.2",
     "flickity": "^3.0.0",
@@ -32,10 +29,7 @@
     "rough-notation": "^0.5.1",
     "split-type": "^0.3.4",
     "swiper": "^11.0.7",
-<<<<<<< HEAD
-=======
     "tsparticles": "^3.3.0",
->>>>>>> 247d72b (init)
     "typeit": "^8.8.3",
     "typit": "^0.6.4"
   }
