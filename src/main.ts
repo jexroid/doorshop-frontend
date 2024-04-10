@@ -55,7 +55,6 @@ new Swiper('.swiper', {
 const wordanimation = gsap.timeline({
     scrollTrigger: {
         trigger: '.word',
-        markers: true,
         toggleActions: 'restart reverse restart none',
         end: 'top 13%',
         start: 'top 90%',
@@ -92,7 +91,6 @@ gsap.from('.shoplist', {
     opacity: 0,
     scrollTrigger: {
         trigger: '.shoplist',
-        markers: true,
         toggleActions: 'restart reverse restart none',
         end: 'top 13%',
         start: 'top 90%',
@@ -107,7 +105,6 @@ gsap.from(wsau.words, {
     opacity: 0,
     scrollTrigger: {
         trigger: '.wsauclass',
-        markers: true,
         toggleActions: 'restart none restart none',
         end: 'top 13%',
         start: 'top 90%',

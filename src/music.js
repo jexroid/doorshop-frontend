@@ -2,7 +2,6 @@ import { Howl, Howler } from 'howler';
 
 
 const buttons = document.querySelectorAll('.btn');
-let clicked = false
 
 let sound = new Howl({
     src: ['/click.ogg'],
@@ -14,6 +13,8 @@ let musicbackground = new Howl({
     loop: true
 })
 
+
+
 buttons.forEach(el => el.addEventListener('click', () => {
     sound.play()
     navigator.vibrate(40)
@@ -22,4 +23,21 @@ buttons.forEach(el => el.addEventListener('click', () => {
 
 window.addEventListener('load', function () {
     musicbackground.play()
+    let mutation = musicbackground.playing()
+
+    document.getElementById('mute').addEventListener('click', () => {
+        if (mutation) {
+
+
+            musicbackground.stop()
+            mutation = musicbackground.playing()
+        } else {
+
+            musicbackground.play()
+            mutation = musicbackground.playing()
+
+        }
+    })
 })
+
+
