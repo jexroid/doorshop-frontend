@@ -1,10 +1,11 @@
-import { Howl, Howler } from 'howler';
+import { Howl } from 'howler';
 
 
 const buttons = document.querySelectorAll('.btn');
 
 let sound = new Howl({
     src: ['/click.ogg'],
+    volume: 0.3,
     html5: true
 });
 
@@ -23,18 +24,14 @@ buttons.forEach(el => el.addEventListener('click', () => {
 
 window.addEventListener('load', function () {
     musicbackground.play()
-    let mutation = musicbackground.playing()
-
     document.getElementById('mute').addEventListener('click', () => {
-        if (mutation) {
+        if (musicbackground.playing()) {
 
 
             musicbackground.stop()
-            mutation = musicbackground.playing()
         } else {
 
             musicbackground.play()
-            mutation = musicbackground.playing()
 
         }
     })

@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/lazlo.woff2) format('woff2');
+  }
+  h1 {
+    font-family: "Roboto", system-ui, sans-serif;
+  }
+}
+
 @keyframes glow {
   0%, to {
       box-shadow: 0 0 5px #ff9900, 0 0 10px #fa9600, 0 0 15px #e1fa00
@@ -9,6 +22,15 @@
   50% {
       box-shadow: 0 0 20px #e1fa00, 0 0 30px #fa9600, 0 0 40px #ff9900
   }
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1
 }
 
 svg {
@@ -63,6 +85,7 @@ h1 {
 }
 p {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  font-family: "Roboto", system-ui, sans-serif
 }
 
 .text-6xl {

@@ -83,6 +83,8 @@ wordanimation.from(mol.words, {
     delay: 0.2
 })
 
+
+
 gsap.from('.shoplist', {
     y: 100,
     stagger: 0.13,
