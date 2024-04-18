@@ -10,7 +10,6 @@
 </head>
 
 <body class="overflow-x-hidden rounded-t-lg">
-    <div id="particles-js"></div>
     <header>
 
         <nav class="navbar bg-base-100 shadow-lg fixed z-10 rounded-b-3xl bg-gradient-to-bl from-[#FF9153] to-[#FFD143] border-gray-200">
@@ -130,11 +129,25 @@
         </nav>
     </header>
     <div id="cursor"></div>
+    <div class="loadng hidein" id="loader">
+        <div class="loadng-text">
+            <span class="loadng-text-words">L</span>
+            <span class="loadng-text-words">O</span>
+            <span class="loadng-text-words">A</span>
+            <span class="loadng-text-words">D</span>
+            <span class="loadng-text-words">I</span>
+            <span class="loadng-text-words">N</span>
+            <span class="loadng-text-words">G</span>
+        </div>
+    </div>
     <main>
+        <!-- dear developer if you needed the source code, its open source, visit my github: https://github.com/jexroid -->
+    <div id="particles-js"></div>
+        
         <div class="w-full min-h-32"> </div>
         <section class="">
-            <div id="mute" class="btn">
-                biseda
+            <div id="mute" class="btn rounded-full">
+                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M15 23l-9.309-6h-5.691v-10h5.691l9.309-6v22zm-9-15.009v8.018l8 5.157v-18.332l-8 5.157zm14.228-4.219c2.327 1.989 3.772 4.942 3.772 8.229 0 3.288-1.445 6.241-3.77 8.229l-.708-.708c2.136-1.791 3.478-4.501 3.478-7.522s-1.342-5.731-3.478-7.522l.706-.706zm-2.929 2.929c1.521 1.257 2.476 3.167 2.476 5.299 0 2.132-.955 4.042-2.476 5.299l-.706-.706c1.331-1.063 2.182-2.729 2.182-4.591 0-1.863-.851-3.529-2.184-4.593l.708-.708zm-12.299 1.299h-4v8h4v-8z"/></svg>
             </div>
 
 
@@ -635,6 +648,7 @@
     </footer>
     </main>
     
+    <script src="src/dom_interaction.js"></script>
     <script type="module" src="src/main.ts"></script>
     <script type="module" src="src/music.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>

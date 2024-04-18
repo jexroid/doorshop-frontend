@@ -1,4 +1,4 @@
-import '../style.css'
+import '../style.scss'
 import 'aos/dist/aos.css'
 import 'swiper/css/bundle';
 import 'atropos/css';
@@ -8,7 +8,7 @@ import SplitType from "split-type";
 import KUTE from 'kute.js'
 import Swiper from 'swiper/bundle';
 import Atropos from 'atropos';
-import AOS from 'aos'
+import AOS from 'aos';
 gsap.registerPlugin(ScrollTrigger);
 
 const mol = new SplitType('.welcome', { types: 'lines,words' })
@@ -67,7 +67,7 @@ head.from('.navbar', {
     opacity: 0,
     y: -550,
     duration: 1.5,
-    
+
 })
 
 head.from('.swiper', {
@@ -173,24 +173,7 @@ gsap.from(wsau.words, {
 
 
 
-let whatisthedevice = navigator.userAgent
-const cursor = document.getElementById('cursor') as HTMLElement;
-
-if (whatisthedevice.match(/Android/i)
-    || whatisthedevice.match(/webOS/i)
-    || whatisthedevice.match(/iPhone/i)
-    || whatisthedevice.match(/iPad/i)
-    || whatisthedevice.match(/iPod/i)
-    || whatisthedevice.match(/BlackBerry/i)
-    || whatisthedevice.match(/Windows Phone/i)) {
-    cursor.style.visibility = 'hidden'
-} else {
-    const body = document.body;
-    // Update circle position on mouse movement
-    body.addEventListener('mousemove', (event) => {
-        cursor.style.left = event.clientX + 'px';
-        cursor.style.top = event.clientY + 'px';
-    });
-}
 
 AOS.init();
+
+
