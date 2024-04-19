@@ -1,5 +1,6 @@
 .vs/
 dist/*
+dist/index.html
 
 package-lock.json
 
