@@ -1,9 +1,5 @@
-# Logs
-.dist/*
 .vs/
-.vs
-.vs/*
-
+dist/*
 
 package-lock.json
 

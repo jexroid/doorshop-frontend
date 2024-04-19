@@ -5,7 +5,6 @@ import 'atropos/css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
-import KUTE from 'kute.js'
 import Swiper from 'swiper/bundle';
 import Atropos from 'atropos';
 import AOS from 'aos';
@@ -55,7 +54,7 @@ new Swiper('.swiper', {
 const wordanimation = gsap.timeline({
     scrollTrigger: {
         trigger: '.word',
-        toggleActions: 'restart reverse restart none',
+        toggleActions: "play pause resume reverse",
         end: 'top 13%',
         start: 'top 90%',
     }
@@ -83,7 +82,9 @@ wordanimation.from(mol.words, {
     delay: 0.2
 })
 
-
+function log() {
+    console.log('hes out')
+}
 
 gsap.from('.shoplist', {
     y: 100,
@@ -92,8 +93,9 @@ gsap.from('.shoplist', {
     delay: 0.2,
     opacity: 0,
     scrollTrigger: {
+        onLeave: () => {log()},
         trigger: '.shoplist',
-        toggleActions: 'restart reverse restart none',
+        toggleActions: "play pause resume reverse",
         end: 'top 13%',
         start: 'top 90%',
     }
@@ -107,72 +109,36 @@ gsap.from(wsau.words, {
     opacity: 0,
     scrollTrigger: {
         trigger: '.wsauclass',
-        toggleActions: 'restart none restart none',
+        toggleActions: "play pause resume reverse",
         end: 'top 13%',
         start: 'top 90%',
     }
 })
 
 
-// KUTE.fromTo('#blob3',
-//     {path: '#blob3'},
-//     {path: '#blob4'},
-//     {repeat: 999, duration: 2000, yoyo: true}
-// ).start()
+const stats = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.stats',
+        toggleActions: "play pause resume reverse",
+        end: 'top 13%',
+        start: 'top 90%',
+    }
+})
 
-// KUTE.fromTo('#blob5',
-//     {path: '#blob5'},
-//     {path: '#blob6'},
-//     {repeat: 999, duration: 2000, yoyo: true}
-// ).start()
+stats.from('.stats', {
+    y: 100,
+    duration: 0.3,
+    delay: 0.2,
+    opacity: 0,
+})
 
-// KUTE.fromTo('#blob7',
-//     {path: '#blob7'},
-//     {path: '#blob8'},
-//     {repeat: 999, duration: 2000, yoyo: true}
-// ).start()
-
-// KUTE.fromTo('#blob9',
-//     {path: '#blob9'},
-//     {path: '#blob10'},
-//     {repeat: 999, duration: 2000, yoyo: true}
-// ).start()
-
-
-// // 
-
-// KUTE.fromTo('#lob1',
-//     {path: '#lob1'},
-//     {path: '#lob2'},
-//     {repeat: 999, duration: 2000, yoyo: true}
-// ).start()
-
-// KUTE.fromTo('#lob3',
-//     {path: '#lob3'},
-//     {path: '#lob4'},
-//     {repeat: 999, duration: 2000, yoyo: true}
-// ).start()
-
-// KUTE.fromTo('#lob5',
-//     {path: '#lob5'},
-//     {path: '#lob6'},
-//     {repeat: 999, duration: 2000, yoyo: true}
-// ).start()
-
-// KUTE.fromTo('#lob7',
-//     {path: '#lob7'},
-//     {path: '#lob8'},
-//     {repeat: 999, duration: 2000, yoyo: true}
-// ).start()
-
-// KUTE.fromTo('#lob9',
-//     {path: '#lob9'},
-//     {path: '#lob10'},
-//     {repeat: 999, duration: 2000, yoyo: true}
-// ).start()
-
-
-
+stats.from('.stat', {
+    y: -100,
+    duration: 0.3,
+    delay: 0.2,
+    opacity: 0,
+    stagger: 0.1
+})
 
 AOS.init();
 

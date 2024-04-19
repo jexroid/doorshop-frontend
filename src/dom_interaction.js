@@ -30,9 +30,22 @@ if (whatisthedevice.match(/Android/i)
 }
 
 
-const loadingScreen = document.getElementById('loadng');
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadingScreen.classList.add('hidein')
-})
+
+// toggling mute Button
+const svgOne = document.getElementById('sound-on')
+const svgTwo = document.getElementById('sound-off')
+
+function toggleSVGs(clickedSVG) {
+    if (clickedSVG === svgOne) {
+        svgOne.style.display = 'none';
+        svgTwo.style.display = 'block';
+    } else {
+        svgOne.style.display = 'block';
+        svgTwo.style.display = 'none';
+    }
+}
+
+svgOne.addEventListener('click', () => toggleSVGs(svgOne));
+svgTwo.addEventListener('click', () => toggleSVGs(svgTwo));

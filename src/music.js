@@ -20,21 +20,34 @@ buttons.forEach(el => el.addEventListener('click', () => {
     sound.play()
     navigator.vibrate(40)
 }));
-
-
+let mutebutton = document.getElementById('mute')
+let mute_status = false
 window.addEventListener('load', function () {
     musicbackground.play()
-    document.getElementById('mute').addEventListener('click', () => {
+    mutebutton.addEventListener('click', () => {
         if (musicbackground.playing()) {
-
-
             musicbackground.stop()
+            mute_status = true
         } else {
-
             musicbackground.play()
-
+            mute_status = false
         }
     })
 })
 
 
+document.addEventListener('visibilitychange', () => {
+    if (mute_status == false) {
+        if (document.visibilityState === 'hidden') {
+            // User is not viewing the page (limited functionality)
+            if (musicbackground.playing()) {
+                musicbackground.stop()
+            } 
+        } else if (document.visibilityState == 'visible') {
+            if (musicbackground.playing() == false) {
+                musicbackground.play()
+            }
+        }
+    }
+    
+});

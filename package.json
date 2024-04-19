@@ -26,6 +26,7 @@
     "atropos": "^2.0.2",
     "flickity": "^3.0.0",
     "gsap": "^3.12.5",
+    "gsap-trial": "^3.12.5",
     "howler": "^2.2.4",
     "kute.js": "^2.2.4",
     "rough-notation": "^0.5.1",
