@@ -13,7 +13,15 @@ export default {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["light", "dark", "bumblebee"],
-  },
+    themes: ["cupcake"],
+    theme: {
+      extend: {
+        colors: {
+          yel: "#FFD143",
+          org: "#FF9153",
+        },
+      },
+    },
+  }
 }
 

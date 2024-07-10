@@ -139,65 +139,65 @@ div.clickEffect {
 
 
 
-/* loadng */
-@mixin position-center($text-align: center) {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  text-align: $text-align;
-}
+// /* loadng */
+// @mixin position-center($text-align: center) {
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   margin: auto;
+//   text-align: $text-align;
+// }
 
-.loadng {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #ffffff;
-  z-index: 9999;
-}
+// .loadng {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: #ffffff;
+//   z-index: 9999;
+// }
 
-.hidein {
-  opacity: 0;
-  /* Transparent (hidden) */
-  transition-property: opacity;
-  /* Specify opacity for transition */
-  transition-duration: 0.5s;
-  /* Set animation duration (optional) */
-  transition-timing-function: ease-in-out;
-  pointer-events: none;
-}
+// .hidein {
+//   opacity: 0;
+//   /* Transparent (hidden) */
+//   transition-property: opacity;
+//   /* Specify opacity for transition */
+//   transition-duration: 0.5s;
+//   /* Set animation duration (optional) */
+//   transition-timing-function: ease-in-out;
+//   pointer-events: none;
+// }
 
-.loadng-text {
-  @include position-center;
-  width: 100%;
-  height: 100px;
-  line-height: 100px;
+// .loadng-text {
+//   @include position-center;
+//   width: 100%;
+//   height: 100px;
+//   line-height: 100px;
 
-  span {
-    display: inline-block;
-    margin: 0 5px;
-    color: #000000;
-    font-family: 'Quattrocento Sans', sans-serif;
+//   span {
+//     display: inline-block;
+//     margin: 0 5px;
+//     color: #000000;
+//     font-family: 'Quattrocento Sans', sans-serif;
 
-    @for $i from 0 through 6 {
-      &:nth-child(#{$i + 1}) {
-        filter: blur(0px);
-        animation: blur-text 1.5s (calc($i / 5))+s infinite linear alternate;
-      }
-    }
-  }
-}
+//     @for $i from 0 through 6 {
+//       &:nth-child(#{$i + 1}) {
+//         filter: blur(0px);
+//         animation: blur-text 1.5s (calc($i / 5))+s infinite linear alternate;
+//       }
+//     }
+//   }
+// }
 
-@keyframes blur-text {
-  0% {
-    filter: blur(0px);
-  }
+// @keyframes blur-text {
+//   0% {
+//     filter: blur(0px);
+//   }
 
-  100% {
-    filter: blur(4px);
-  }
-}
+//   100% {
+//     filter: blur(4px);
+//   }
+// }

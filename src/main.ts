@@ -54,7 +54,7 @@ new Swiper('.swiper', {
 const wordanimation = gsap.timeline({
     scrollTrigger: {
         trigger: '.word',
-        toggleActions: "play pause resume reverse",
+        toggleActions: "play none resume reverse",
         end: 'top 13%',
         start: 'top 90%',
     }
@@ -95,7 +95,7 @@ gsap.from('.shoplist', {
     scrollTrigger: {
         onLeave: () => {log()},
         trigger: '.shoplist',
-        toggleActions: "play pause resume reverse",
+        toggleActions: "play none resume reverse",
         end: 'top 13%',
         start: 'top 90%',
     }
@@ -109,7 +109,7 @@ gsap.from(wsau.words, {
     opacity: 0,
     scrollTrigger: {
         trigger: '.wsauclass',
-        toggleActions: "play pause resume reverse",
+        toggleActions: "play none resume reverse",
         end: 'top 13%',
         start: 'top 90%',
     }
@@ -119,7 +119,7 @@ gsap.from(wsau.words, {
 const stats = gsap.timeline({
     scrollTrigger: {
         trigger: '.stats',
-        toggleActions: "play pause resume reverse",
+        toggleActions: "play none resume reverse",
         end: 'top 13%',
         start: 'top 90%',
     }
